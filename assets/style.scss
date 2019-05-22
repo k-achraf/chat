@@ -1,0 +1,151 @@
+body{
+  background: url("bg.jpg");
+  background-size: cover;
+}
+
+.overlay{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  background: #0006;
+  z-index: 1;
+}
+.login{
+  width: 380px;
+  max-width: 90%;
+  margin: 50px auto;
+  z-index: 4;
+  position: relative;
+  background: #ffffffad;
+  padding: 20px;
+  border: 1px solid #ccc;
+
+  h1{
+    margin-bottom: 30px;
+    color: #20639b;
+    padding: 10px;
+    position: relative;
+
+    &::before{
+      content: "";
+      width: 100px;
+      height: 2px;
+      background: #20639b;
+      position: absolute;
+      bottom: 0px;
+    }
+  }
+  div{
+    position: relative;
+  }
+  input{
+    border: none;
+    outline: none;
+    background: transparent;
+    border-bottom: 3px solid #20639b;
+    width: 100%;
+    position: relative;
+    padding: 10px;
+    margin-bottom: 20px;
+    transition: .5s ease-in-out;
+    color: #696969;
+  }
+  input:-webkit-autofill {
+    -webkit-text-fill-color: #696969 !important;
+    background-color: transparent !important;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+
+  span{
+    position: absolute;
+    top: 9px;
+    left: 14px;
+    color: #696969;
+    font-size: 17px;
+    font-family: tahoma;
+    transition: .5s all ease-in-out;
+  }
+
+  button{
+    width: 100%;
+    text-align: center;
+    background: #ffffff82;
+    outline: none !important;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+
+    &:focus{
+      outline: none !important;
+    }
+  }
+
+  .span{
+    span{
+      position: absolute;
+      top: -13px;
+      left: 3px;
+      color: #20639b;
+      font-size: 14px;
+      font-family: tahoma;
+    }
+  }
+}
+.box{
+  background: #fff;
+  z-index: 3;
+  position: relative;
+  margin-top: 30px;
+
+  .box-title{
+    padding: 5px;
+    background: #20639b;
+    color: #fff;
+    font-size: 16px;
+    font-family: tahoma;
+    font-weight: bold;
+
+    p{
+      margin: 0 !important;
+    }
+  }
+  .box-body{
+    padding: 15px;
+
+    .users-box{
+      max-height: 420px;
+      overflow-y: scroll;
+    }
+    .user{
+      margin-left: 12px;
+      padding: 10px;
+      border-bottom: 1px solid #20639b;
+      margin-bottom: 25px;
+      color: #20639b;
+    }
+  }
+
+  .messages{
+    height: 100%;
+    position: relative;
+
+    .messages-show{
+      overflow-y: scroll;
+      max-height: 300px;
+    }
+    input{
+      position: absolute;
+      bottom: 40px;
+    }
+    .msg{
+      font-size: 14px;
+
+      b{
+        margin-right: 15px;
+      }
+      small{
+        font-size: 10px;
+      }
+    }
+  }
+}
